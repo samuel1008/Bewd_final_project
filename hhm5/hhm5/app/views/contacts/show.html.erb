@@ -1,0 +1,18 @@
+ <p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+ 
+<p>
+  <strong>Phone Number:</strong>
+  <%= @contact.phonenumber %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+
+<%= link_to 'Back', contacts_path %>
+| <%= link_to 'Edit', edit_contact_path(@contact) %>

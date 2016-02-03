@@ -1,0 +1,23 @@
+<h1>Contacts</h1>
+
+
+	<%= render 'contacts/form' %>
+
+	<%= link_to 'Phonebook', controller: 'contacts' %>
+
+	<%= link_to 'Back', contacts_path %>
+
+	<div>
+<% @contacts.each do |contact| %>
+	<div>
+		<%= contact.name %>
+		<%= contact.phonenumber %>
+
+		<%= form_tag send_text_url(id: contact.id) do %>
+			<%= text_area_tag :body %> 
+			<%= submit_tag "Send message" %>
+		<% end %>
+
+	</div>
+<% end %>
+</div>
